@@ -1,7 +1,5 @@
-# -*- coding: utf-8 -*-
-"""ATP ORGANIZAÇÃO DE COMPUTADORES 6O SEM 2026
 
-Simulador de Computador RISC-V (RV32I) - CPU, Barramento, RAM/VRAM, E/S
+
 
 Estrutura do arquivo:
     1.) Funções auxiliares (ctypes)  - conversão signed/unsigned de 32 bits
@@ -10,10 +8,6 @@ Estrutura do arquivo:
     4.) CPU                          - ciclo único: busca, decodificação, execução, PC
     5.) Montador (auxiliar)          - gera o código de máquina do programa de teste
     6.) Programa de teste e testes   - exercita todas as funcionalidades
-
-Original file is located at
-    https://colab.research.google.com/drive/1zgcv7c9G7_LY1moaEVmZWwt_HS-0ONWA
-"""
 
 import ctypes
 
@@ -489,7 +483,7 @@ class CPU:
 # 5.) MONTADOR (AUXILIAR) - transforma assembly RV32I em código de máquina
 #------------------------------------------------------------------------------
 #Não faz parte do hardware simulado: serve para gerar o programa de teste sem
-#precisar de um compilador. O resultado pode ser comparado com o do Compiler Explorer.
+#precisar de um compilador
 REGISTRADORES = {nome: i for i, nome in enumerate(NOMES_ABI)}
 REGISTRADORES.update({"fp": 8, **{f"x{i}": i for i in range(32)}})
 
